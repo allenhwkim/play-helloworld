@@ -37,7 +37,7 @@ project/build.properties
 
 project/plugins.sbt
 ```
-ddSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.12")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.12")
 ```
 
 ## First Run without route and contorller
