@@ -31,10 +31,14 @@ conf/application.conf
 ```
 
 project/build.properties
-```project/build.properties```
+```
+project/build.properties
+```
 
 project/plugins.sbt
-```ddSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.12")```
+```
+ddSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.12")
+```
 
 ## First Run without route and contorller
 $ cd helloworld
