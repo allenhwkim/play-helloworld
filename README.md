@@ -1,21 +1,31 @@
 
-## Install Java/IDE/sbt
+## Install and Run
 ```
+$ ##### Java Install           #####
 $ brew cask install java8
 $ java -version
+$ ##### Intellij-Idea Install  #####
 $ brew cask install intellij-idea
 $ vi ~/.bash_profile
 $ # then add    alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`"'
-$ brew install sbt
+$ ##### sbt Install            #####
+$ brew install sbt    # if not installed
 $ sbt about
 $ sbt tasks
+$ ##### Tutorial Install/Run   #####
+$ git clone https://github.com/allenhwkim/play-helloworld.git
+$ cd play-helloworld
+$ sbt run
 ```
 
-## Create directories and files
+## Hands-On Practice: Create directories and files
+This applies to ones who wants to create everything from scratch
+```
 $ mkdir helloworld && cd helloworld
 $ mkdir -p app/controllers app/views conf project
-build.sbt
+```
 
+build.sbt
 ```
 name := "helloworld"
 version := "1.0-SNAPSHOT"
@@ -40,14 +50,14 @@ project/plugins.sbt
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.12")
 ```
 
-## First Run without route and contorller
+## Hands-On Practice: First Run without route and contorller
 $ cd helloworld
 $ sbt
 [helloworld] $ run
 $ open -a "Google Chrome" http://localhost:9000
 
 
-## First Run with contorller and route
+## Hands-On Practice: First Run with contorller and route
 conf/routes
 ```
 GET     /       controllers.HomeController.index()
