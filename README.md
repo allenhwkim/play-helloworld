@@ -4,14 +4,17 @@
 $ ##### Java Install           #####
 $ brew cask install java8
 $ java -version
+$
 $ ##### Intellij-Idea Install  #####
 $ brew cask install intellij-idea
 $ vi ~/.bash_profile
 $ # then add    alias idea='open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`"'
+$
 $ ##### sbt Install            #####
 $ brew install sbt    # if not installed
 $ sbt about
 $ sbt tasks
+$
 $ ##### Tutorial Install/Run   #####
 $ git clone https://github.com/allenhwkim/play-helloworld.git
 $ cd play-helloworld
@@ -51,11 +54,12 @@ addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.12")
 ```
 
 ## Hands-On Practice: First Run without route and contorller
+```
 $ cd helloworld
 $ sbt
 [helloworld] $ run
 $ open -a "Google Chrome" http://localhost:9000
-
+```
 
 ## Hands-On Practice: First Run with contorller and route
 conf/routes
